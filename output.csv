@@ -1,0 +1,2 @@
+url,content-type,content-disposition,content-security-policy,x-content-type-options,strict-transport-security,referrer-policy,allow,access-control-allow-origin,x-xss-protection,embeddingPolicy,origin
+https://academicos.ipvc.pt/netpa/page,true,false,false,true,false,false,false,false,true,false,false

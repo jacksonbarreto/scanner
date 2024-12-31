@@ -1,0 +1,77 @@
+{
+    "appId": "HTTP-HEADERS-SCANNER",
+    "appName": "HTTP Headers Scanner Service",
+    "environments": {
+      "prod": {
+        "rabbit": {
+          "protocol": "amqp",
+          "hostname": "localhost",
+          "queue": "analysis-request-dev",
+          "resultQueue": "analysis-results-dev",
+          "username": "${BROKER_USER}",
+          "password": "${BROKER_PASS}",
+          "port": 5672,
+          "vhost": "/",
+          "heartbeat": 30,
+          "connection_timeout": 10000,
+          "authMechanism": [
+            "PLAIN",
+            "AMQPLAIN",
+            "EXTERNAL"
+          ]
+        },
+        "log": {
+          "level": "error",
+          "pretty": false
+        }
+      },
+      "dev": {
+        "rabbit": {
+          "protocol": "amqp",
+          "hostname": "localhost",
+          "queue": "analysis-request-dev",
+          "resultQueue": "analysis-results-dev",
+          "username": "${BROKER_USER}",
+          "password": "${BROKER_PASS}",
+          "port": 5672,
+          "vhost": "/",
+          "heartbeat": 30,
+          "connection_timeout": 10000,
+          "authMechanism": [
+            "PLAIN",
+            "AMQPLAIN",
+            "EXTERNAL"
+          ]
+        },
+        "log": {
+          "level": "info",
+          "pretty": true,
+          "colorize": true
+        }
+      },
+      "test": {
+        "rabbit": {
+          "protocol": "amqp",
+          "hostname": "localhost",
+          "queue": "analysis-request-dev",
+          "resultQueue": "analysis-results-dev",
+          "username": "${BROKER_USER}",
+          "password": "${BROKER_PASS}",
+          "port": 5672,
+          "vhost": "/",
+          "heartbeat": 30,
+          "connection_timeout": 10000,
+          "authMechanism": [
+            "PLAIN",
+            "AMQPLAIN",
+            "EXTERNAL"
+          ]
+        },
+        "log": {
+          "level": "debug",
+          "pretty": true,
+          "colorize": true
+        }
+      }
+    }
+  }
